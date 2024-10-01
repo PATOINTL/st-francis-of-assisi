@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="loader">
+            <svg class="loader-svg" viewBox="25 25 50 50">
+                <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+        </div>
+        <h1 id="loading-text">Loading...</h1>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set a timer to remove the loader and redirect to main.php after 4 seconds
+            setTimeout(function () {
+                // Optionally fade out the loader before redirecting
+                document.querySelector('.loader-container').style.opacity = '0';
+
+                // Wait for the fade-out animation to complete before redirecting
+                setTimeout(function () {
+                    window.location.href = 'main.html'; // Redirect to main.php
+                }, 500); // 500ms to match the fade-out duration
+            }, 4000); // Show loader for 4 seconds
+        });
+    </script>
+</body>
+
+</html>

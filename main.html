@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>St. Francis of Assisi Chaplaincy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="images/st_francis.webp" type="image/x-icon" />
+  </head>
+  <body>
+ 
+
+    <div class="container">
+      
+        <nav class="nav_bar_container">
+          <div class="logo">
+            <a href="#"><img src="assets/images/st_francis.webp" alt="Church Logo" /></a>
+          </div>
+          <div class="navigation">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a href="#">Services <span class="dropdown-icon">▼</span></a>
+                <ul class="dropdown-content">
+                  <li><a href="#">Mass Times</a></li>
+                  <li><a href="#">Sacraments</a></li>
+                  <li><a href="#">Community Service</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Prayers <span class="dropdown-icon">▼</span></a>
+                <ul class="dropdown-content">
+                  <li><a href="#">Daily Prayers</a></li>
+                  <li><a href="#">Prayer Requests</a></li>
+                  <li><a href="#">Rosary</a></li>
+                </ul>
+              </li>
+              <li><a href="event.php">Events</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="nav_toggle">
+            <button class="toggle_button" aria-label="Toggle navigation">
+              ☰
+            </button>
+          </div>
+        </nav>
+      </div>
+      
+      <script>
+        
+        // Toggle mobile menu visibility
+        const toggleButton = document.querySelector('.toggle_button');
+        const navigation = document.querySelector('.navigation ul');
+        let isNavOpen = false;
+      
+        toggleButton.addEventListener('click', function () {
+          navigation.classList.toggle('active');
+          isNavOpen = !isNavOpen;
+          toggleButton.innerHTML = isNavOpen ? '✖' : '☰'; // Toggle between open and close button
+        });
+      </script>
+      
+
+
+
+    
+    
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="assets/images/members.jpg" class="slide-image" alt="Executive Members" />
+          <div class="text">Executive Members</div>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="assets/images/chior.jpg" class="slide-image" alt="Echos of Glory Choir" />
+          <div class="text">Echos of Glory Choir</div>
+        </div>
+    
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="assets/images/cross 2.jpg" class="slide-image" alt="Chris's cross" />
+          <div class="text">Chris's cross</div>
+        </div>
+    
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="manualControl(); plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="manualControl(); plusSlides(1)">&#10095;</a>
+      </div>
+    
+      <!-- Dots indicator -->
+      <div style="text-align: center">
+        <span class="dot" onclick="manualControl(); currentSlide(1)"></span>
+        <span class="dot" onclick="manualControl(); currentSlide(2)"></span>
+        <span class="dot" onclick="manualControl(); currentSlide(3)"></span>
+      </div>
+    
+      <script>
+        var slideIndex = 0;
+        var autoSlideInterval = setInterval(autoSlides, 3000); // Change slide every 3 seconds
+    
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+    
+          if (n >= slides.length) {
+            slideIndex = 0;
+          } else if (n < 0) {
+            slideIndex = slides.length - 1;
+          }
+    
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+    
+          slides[slideIndex].style.display = "block";
+          dots[slideIndex].className += " active";
+        }
+    
+        // Automatic slideshow
+        function autoSlides() {
+          slideIndex++;
+          showSlides(slideIndex);
+        }
+    
+        // When user interacts, stop automatic slideshow
+        function manualControl() {
+          clearInterval(autoSlideInterval);
+        }
+    
+        // Start with the first slide
+        showSlides(slideIndex);
+      </script>
+    
+
+    
+      
+
+<div class="heading">
+  <p class="heading-content" style="text-align: center; font-weight: bold; font-size: 2em;">Our Leaders</p>
+</div>
+
+<div class="container_cards">
+  <!-- Card 1 -->
+  <div class="container_card">
+    <div class="content">
+      <div class="image">
+        <img src="assets/images/cross 1.jpg" alt="leader 1" class="image-leader">
+      </div>
+      <div class="profile">
+        <div class="name">
+          <p class="name-leader">Fr. Edward Muhumuza</p>
+        </div>
+        <div class="position">
+          <p class="role">Chaplain</p>
+        </div>
+        <div class="contact">
+          <button class="contact-button"><a href="https://wa.me/0772918718" target="_blank">Contact</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="container_card">
+    <div class="content">
+      <div class="image">
+        <img src="assets/images/cross 2.jpg" alt="leader 2" class="image-leader">
+      </div>
+      <div class="profile">
+        <div class="name">
+          <p class="name-leader">Mrs. Mbabazi Grace</p>
+        </div>
+        <div class="position">
+          <p class="role">Patroness</p>
+        </div>
+        <div class="contact">
+          <button class="contact-button"><a href="https://wa.me/0772918718" target="_blank">Contact</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="container_card">
+    <div class="content">
+      <div class="image">
+        <img src="assets/images/st_francis" alt="leader 3" class="image-leader">
+      </div>
+      <div class="profile">
+        <div class="name">
+          <p class="name-leader">Mr. Josephat Sabiiti</p>
+        </div>
+        <div class="position">
+          <p class="role">Chaplaincy Chairperson</p>
+        </div>
+        <div class="contact">
+          <button class="contact-button"><a href="https://wa.me/0772918718" target="_blank">Contact</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="container_card">
+    <div class="content">
+      <div class="image">
+        <img src="assets/images/komu-red.jpg" alt="leader 4" class="image-leader">
+      </div>
+      <div class="profile">
+        <div class="name">
+          <p class="name-leader">Ms. Komuntale Hellen</p>
+        </div>
+        <div class="position">
+          <p class="role">Vice Chair person</p>
+        </div>
+        <div class="contact">
+          <button class="contact-button"><a href="https://wa.me/0772918718" target="_blank">Contact</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="leaders.html">Other Leaders</a>
+</div>
+
+
+
+
+<div class="welcoming_verse">
+  <div class="the_verse_content">
+    <div class="the_verse">
+      <h4>
+        "I am the door. If anyone enters by me, <br />
+        he will be saved and will go in and out and find pasture."
+      </h4>
+      <button id="verse">John 10:9</button>
+    </div>
+    <div class="the_verse_image">
+      <img src="assets/images/cross 2.jpg" alt="Biblical Image">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="heading"></div>
+  <p class="heading-content" style="text-align: center; font-weight: bold; font-size: 2em;">Sisters</p>
+</div>
+
+<div class="container_cards">
+  <!-- Card 1 -->
+  <div class="container_card">
+    <div class="content">
+      <div class="image">
+        <img src="assets/images/cross 1.jpg" alt="leader 1" class="image-leader">
+      </div>
+      <div class="profile">
+        <div class="name">
+          <p class="name-leader">Fr. Edward Muhumuza</p>
+        </div>
+        <div class="position">
+          <p class="role">Chaplain</p>
+        </div>
+        <div class="contact">
+          <button class="contact-button"><a href="https://wa.me/0772918718" target="_blank">Contact</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Card 4 -->
+  <div class="container_card">
+    <div class="content">
+      <div class="image">
+        <img src="assets/images/komu-red.jpg" alt="leader 4" class="image-leader">
+      </div>
+      <div class="profile">
+        <div class="name">
+          <p class="name-leader">Ms. Komuntale Hellen</p>
+        </div>
+        <div class="position">
+          <p class="role">Vice Chair person</p>
+        </div>
+        <div class="contact">
+          <button class="contact-button"><a href="https://wa.me/0772918718" target="_blank">Contact</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <div class="upcoming_event">
+        <h2>Upcoming-events</h2>
+        <div class="upcoming-events">
+          <div class="event">
+            <h3>Recollection festival</h3>
+            <p>Date: October 09, 2024</p>
+            <p>Location: Main Campus</p>
+            <a href="#" class="event-link">Learn more</a>
+          </div>
+<sup></sup>
+          <div class="event">
+            <h3>Holly Rosary</h3>
+            <p>Date: October 02 <sup>nd</sup>, 2024</p>
+            <p>Location: Catholic local communities</p>
+            <a href="#" class="event-link">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 id="the_lords">Peace and Good, Peace and Good</h1>
+        <p id="greeting">
+May His grace fill your hearts as we celebrate together. <br>Let us unite in prayer, offering our praise and thanksgiving to
+God. May His peace and blessings be with you now and always. Amen.
+        </p>
+
+      </div>
+      
+
+
+
+<footer class="ft_container">
+  <div class="footer-content">
+    <div class="services">
+      <h2>Services</h2>
+      <hr />
+      <ul>
+        <li><a href="holy-eucharist.html">Holy Eucharist</a></li>
+        <li><a href="confession.html">Confession</a></li>
+        <li><a href="baptism.html">Baptism</a></li>
+        <li><a href="holy-matrimony.html">Holy Matrimony</a></li>
+        <li><a href="anointing-of-the-sick.html">Anointing of the Sick</a></li>
+        <li><a href="offering.html">Offering</a></li>
+      </ul>
+    </div>
+    <div class="prayers">
+      <h2>Prayers</h2>
+      <hr />
+      <ul>
+        <li><a href="our-father.html">Our Father</a></li>
+        <li><a href="hail-mary.html">Hail Mary</a></li>
+        <li><a href="glory-be.html">Glory Be</a></li>
+        <li><a href="apostles-creed.html">Apostles' Creed</a></li>
+        <li><a href="act-of-contrition.html">Act of Contrition</a></li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <hr />
+      <p>Mountains of the moon university </p>
+      <p>Fort Portal </p>
+      <p>Email: stfrancisofassisi@gmail.com</p>
+      <p>Phone: +256 77 291 8718</p>
+
+   
+    <div class="social-media">
+      <a href="#" aria-label="Facebook">
+        <i class="material-icons">facebook</i>
+      </a>
+      <a href="#" aria-label="Twitter">
+        <i class="material-icons">twitter</i>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <i class="material-icons">instagram</i>
+      </a>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="back-to-top">
+    <a href="#top">Back to Top ↑</a>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2024 Catholic Church. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  </body>
+</html>
